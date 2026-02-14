@@ -133,35 +133,6 @@ function Button() {
   );
 }
 
-function LeftPattern() {
-  return (
-    <div className="w-4 sm:w-6 md:w-8 lg:w-12 self-stretch relative overflow-hidden">
-      <div className="w-[120px] sm:w-[140px] md:w-[162px] left-[-40px] sm:left-[-50px] md:left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
-        <template id="pattern-template">
-          <div className="self-stretch h-3 sm:h-4 rotate-[-45deg] origin-top-left outline outline-[0.5px] outline-[rgba(3,7,18,0.08)] outline-offset-[-0.25px]"></div>
-        </template>
-      </div>
-    </div>
-  );
-}
-
-function Pattern() {
-  return (
-    <div className="absolute top-[232px] sm:top-[248px] md:top-[264px] lg:top-[320px] left-1/2 transform -translate-x-1/2 z-0 pointer-events-none">
-      <svg
-        className="w-[936px] sm:w-[1404px] md:w-[2106px] lg:w-[2808px] h-auto opacity-30 sm:opacity-40 md:opacity-50 mix-blend-multiply"
-        style={{
-          filter: "hue-rotate(15deg) saturate(0.7) brightness(1.2)",
-        }}
-        viewBox="0 0 2808 1200"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <rect width="100%" height="100%" fill="none" />
-      </svg>
-    </div>
-  );
-}
-
 function ServiceCard({ title, description, image, alt, isLast }) {
   return (
     <div
@@ -226,11 +197,99 @@ function FeatureCard({ title, description, image }) {
   );
 }
 
+function Pattern() {
+  return (
+    <>
+      {/* Background Pattern */}
+      <div className="absolute top-[232px] sm:top-[248px] md:top-[264px] lg:top-[320px] left-1/2 transform -translate-x-1/2 z-0 pointer-events-none">
+        <svg
+          className="w-[936px] sm:w-[1404px] md:w-[2106px] lg:w-[2808px] h-auto opacity-30 sm:opacity-40 md:opacity-50 mix-blend-multiply"
+          style={{
+            filter: "hue-rotate(15deg) saturate(0.7) brightness(1.2)",
+          }}
+          viewBox="0 0 2808 1200"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <rect width="100%" height="100%" fill="none" />
+        </svg>
+      </div>
+
+      <div className="self-stretch border-t border-[#E0DEDB] border-b border-[#E0DEDB] flex justify-center items-start mt-60">
+        {/* Left Pattern */}
+        <div className="w-4 sm:w-6 md:w-8 lg:w-12 self-stretch relative overflow-hidden">
+          <div className="w-[120px] sm:w-[140px] md:w-[162px] left-[-40px] sm:left-[-50px] md:left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
+            <template id="pattern-template">
+              <div className="self-stretch h-3 sm:h-4 rotate-[-45deg] origin-top-left outline outline-[0.5px] outline-[rgba(3,7,18,0.08)] outline-offset-[-0.25px]"></div>
+            </template>
+          </div>
+        </div>
+
+        {/* Feature Cards */}
+        <Feature />
+
+        {/* Right Pattern */}
+        <div className="w-4 sm:w-6 md:w-8 lg:w-12 self-stretch relative overflow-hidden">
+          <div className="w-[120px] sm:w-[140px] md:w-[162px] left-[-40px] sm:left-[-50px] md:left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
+            <template id="pattern-template-2">
+              <div className="self-stretch h-3 sm:h-4 rotate-[-45deg] origin-top-left outline outline-[0.5px] outline-[rgba(3,7,18,0.08)] outline-offset-[-0.25px]"></div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 function SectionHeader({ badge, title, subtitle }) {
   return (
     <div className="self-stretch px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1060px] lg:w-[1060px] py-8 sm:py-12 md:py-16 border-b border-[rgba(55,50,47,0.12)] flex justify-center items-center">
       <div className="w-full max-w-[616px] flex flex-col items-center gap-4 text-center">
-        <div className="px-[14px] py-[6px] bg-white rounded-[90px] border border-[rgba(2,6,23,0.08)]">
+        <div className="px-[14px] py-[6px] bg-white shadow-[0px_0px_0px_4px_rgba(55,50,47,0.05)] overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px] border border-[rgba(2,6,23,0.08)] shadow-xs">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="1"
+              y="1"
+              width="4"
+              height="4"
+              stroke="#37322F"
+              stroke-width="1"
+              fill="none"
+            />
+            <rect
+              x="7"
+              y="1"
+              width="4"
+              height="4"
+              stroke="#37322F"
+              stroke-width="1"
+              fill="none"
+            />
+            <rect
+              x="1"
+              y="7"
+              width="4"
+              height="4"
+              stroke="#37322F"
+              stroke-width="1"
+              fill="none"
+            />
+            <rect
+              x="7"
+              y="7"
+              width="4"
+              height="4"
+              stroke="#37322F"
+              stroke-width="1"
+              fill="none"
+            />
+          </svg>
+
           <span className="text-[#37322F] text-xs font-medium">{badge}</span>
         </div>
 
@@ -468,6 +527,7 @@ function Footer() {
             </div>
           </div>
         </div>
+
         {/* Navigation Links */}
         <div className="self-stretch p-4 md:p-8 flex flex-col sm:flex-row flex-wrap justify-start sm:justify-between items-start gap-6 md:gap-8">
           {/* Product Column  */}
@@ -563,31 +623,19 @@ export default function App() {
         <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1060px] lg:w-[1060px] relative flex flex-col justify-start items-start min-h-screen">
           {/* Left vertical line */}
           <div className="w-[1px] h-full absolute left-4 sm:left-6 md:left-8 lg:left-0 top-0 bg-[rgba(55,50,47,0.12)] shadow-[1px_0px_0px_white] z-0"></div>
-
           {/* Right vertical line */}
           <div className="w-[1px] h-full absolute right-4 sm:right-6 md:right-8 lg:right-0 top-0 bg-[rgba(55,50,47,0.12)] shadow-[1px_0px_0px_white] z-0"></div>
-
           <div className="self-stretch pt-[9px] overflow-visible border-[rgba(55,50,47,0.06)] flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-[66px] relative z-10">
             <Navigation />
-
-            <div class="pt-16 sm:pt-20 md:pt-24 lg:pt-[216px] pb-8 sm:pb-12 md:pb-16 flex flex-col justify-start items-center px-2 sm:px-4 md:px-8 lg:px-0 w-full sm:pl-0 sm:pr-0 pl-0 pr-0">
+            <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-[216px] pb-8 sm:pb-12 md:pb-16 flex flex-col justify-start items-center px-2 sm:px-4 md:px-8 lg:px-0 w-full sm:pl-0 sm:pr-0 pl-0 pr-0">
               <Headding />
               <Button />
               <Pattern />
-              <Feature />
-
-              <div className="w-4 sm:w-6 md:w-8 lg:w-12 self-stretch relative overflow-hidden">
-                <div className="w-[120px] sm:w-[140px] md:w-[162px] left-[-40px] sm:left-[-50px] md:left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
-                  <template id="pattern-template-2">
-                    <div className="self-stretch h-3 sm:h-4 rotate-[-45deg] origin-top-left outline outline-[0.5px] outline-[rgba(3,7,18,0.08)] outline-offset-[-0.25px]"></div>
-                  </template>
-                </div>
-              </div>
+              <Testimonial />
+              <ServicesSection />
+              <Pricing />
+              <Footer />
             </div>
-            <Testimonial />
-            <ServicesSection />
-            <Pricing />
-            <Footer />
           </div>
         </div>
       </div>
