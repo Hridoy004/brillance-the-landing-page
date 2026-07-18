@@ -1,16 +1,64 @@
-# React + Vite
+# Brillance - The Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+Brillance is a modern and responsive landing page designed to present a product, service, or brand with an attractive user interface. The website focuses on delivering a clean design, smooth user experience, and responsive layout across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Main Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- HTML5
+- Tailwind CSS
+- JavaScript
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Main Features
+
+- Responsive Landing Page
+- Modern & Clean UI Design
+- Hero Section
+- Services/Features Section
+- Mobile-Friendly Layout
+
+---
+
+## Dependencies
+
+This project is built using core web technologies and does not require any external dependencies.
+
+---
+
+## Run Locally
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Hridoy004/portfolio.git
+```
+
+### Go to the project folder
+
+```bash
+cd portfolio
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## Relevant Links
+
+- **Live Site:** https://brillance-the-landing-page-ha.vercel.app/
+- **GitHub Repository:** https://github.com/Hridoy004/brillance-the-landing-page
